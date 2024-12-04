@@ -4,15 +4,31 @@
   <meta charset="UTF-8">
   <title>アニメーション</title>
   <link rel="stylesheet" type="text/css" href="base.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
-  $(function(){
-    // 左上から中央へ
-  });
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  
+
 </head>
 <body>
   <div id="button">
     <p>button</p>
-  </div><!-- button -->
+  </div>
+
+  <script>
+    const start = document.getElementById('button');
+    const image = document.getElementById('button');
+
+    start.addEventListener('click', () => {
+    image.animate(
+    [
+      { transform: 'translate(300px, 200px)' } 
+    ], 
+    
+    {
+      fill: "forwards",
+      duration: 1000,
+      },
+    );
+    });
+  </script>
 </body>
 </html>

@@ -6,33 +6,27 @@
   <link rel="stylesheet" type="text/css" href="base.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
 
-  $(function(){
-  // ここに処理を記述
+$(function(){
+  // クリックで色変え
   $('#button1').on('click', function() {
     $(this).css('background-color','red');
-    $(this).removeClass('clicked');
     $('#button2').css('background-color','#fdd');
-    $(this).removeClass('clicked');
     $('#button3').css('background-color','#fdd');
-    $(this).removeClass('clicked');
-    $('#button2').on('click', function(){
-      $(this).css('background-color','red');
-      $(this).removeClass('clicked');
-      $('#button1').css('background-color','#fdd');
-      $(this).removeClass('clicked');
-      $('#button3').css('background-color','#fdd');
-      $(this).removeClass('clicked');
-      })
-      $('#button3').on('click', function(){
-        $(this).css('background-color','red');
-        $(this).removeClass('clicked');
-        $('#button1').css('background-color','#fdd');
-        $(this).removeClass('clicked');
-        $('#button2').css('background-color','#fdd');
-        $(this).removeClass('clicked');
-      })
-    });
+    
+  $('#button2').on('click', function(){
+    $(this).css('background-color','red');
+    $('#button1').css('background-color','#fdd');
+    $('#button3').css('background-color','#fdd');
+    })
+      
+  $('#button3').on('click', function(){
+    $(this).css('background-color','red');
+    $('#button1').css('background-color','#fdd');
+    $('#button2').css('background-color','#fdd');
+    })
   });
+});
+
   </script>
 
 </head>
